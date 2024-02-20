@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(to top right, green, blue);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    display: flex;
+    border: solid 1px white;
+    height: 40rem;
+    width: 60rem;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    font-size: large;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.btn:active {
+    transform: translate(-50%, 3px);
+}
+.btn-new {
+    top: 5rem;
+}
+.btn-roll {
+    top: 28rem;
+}
+.btn-hold {
+    top: 34rem;
+}
+.dice {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    top: 10rem;
+    max-width: 15%;    
+    height: auto;
+}
+
+.container {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    filter: blur(2px);
+}
+
+.box p{
+   margin: 2rem;
+   color: red;
+   font-size: xxx-large;
+   text-align: center;
+   padding: 1rem;
+ }
+.box1 p{
+   font-size: xx-large;
+   text-align: center;
+   color: yellow;
+   padding: 1rem;
+   margin: 1rem;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px white;
+    border-radius: 1rem;
+    background-color: rgb(101, 135, 124);
+    max-width: 50%;
+    margin: auto;
+}
+
+h2 {
+    color: rgb(53, 171, 53);
+    font-size: xx-large;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+/* if active */
+.player-active {
+    background-color: aqua;
+    border-radius: 1rem;
+    filter: blur();
+}
+
+.current-winner {
+    background-color: rgb(20, 17, 17);
+    border-radius: 1rem;
+    filter: blur();
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .box, .box1 {
+        max-width: 100%;
+    }
+    main {
+    max-width: 100%;
+    }
+    .dice {
+        max-width: 30%;
+    }
+    .btn-new {
+        padding: 0.5rem;
+    }
+}   
